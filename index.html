@@ -382,7 +382,7 @@ body.page-ready{opacity:1}
     © 2025 Afhimna Dev
   </div>
 </div>
-<audio id="dipikirSound" src="dipikir.mp3" preload="auto"></audio>
+<audio id="DipikirSound" src="Dipikir.mp3" preload="auto"></audio>
 <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
 <audio id="correctSound" src="correct.mp3" preload="auto"></audio>
 <audio id="wrongSound" src="wrong.mp3" preload="auto"></audio>
@@ -403,7 +403,7 @@ let alarmPlayed = false;
 
 const timeNum=document.getElementById("timeNum"),
 progressBar=document.getElementById("progressBar"),
-dipikirSound=document.getElementById("dipikirSound"),
+DipikirSound=document.getElementById("DipikirSound"),
 alarmSound=document.getElementById("alarmSound"),
 correctSound=document.getElementById("correctSound"),
 wrongSound=document.getElementById("wrongSound"),
@@ -453,8 +453,8 @@ function startTimer(){
   remaining--;
   timeNum.textContent = remaining;
 
-  dipikirSound.currentTime = 0;
-  dipikirSound.play();
+  DipikirSound.currentTime = 0;
+  DipikirSound.play();
 
   progressBar.style.width = (remaining / (TIME_LIMIT/1000)) * 100 + "%";
     progressBar.className = "";
@@ -585,8 +585,8 @@ function timeUp(){
   wrongSound.currentTime = 0; 
   wrongSound.play();
   
-  dipikirSound.pause();
-  dipikirSound.currentTime = 0;
+  DipikirSound.pause();
+  DipikirSound.currentTime = 0;
 
   quizBox.classList.remove("timer-warning","timer-danger");
   alarmSound.pause();
@@ -815,8 +815,8 @@ function getFinalMessage(percent){
   return "Jangan berkecil hati. Jadikan hasil ini sebagai motivasi.";
 }
 function stopAllSounds(){
-  dipikirSound.pause();
-  dipikirSound.currentTime = 0;
+  DipikirSound.pause();
+  DipikirSound.currentTime = 0;
 
   alarmSound.pause();
   alarmSound.currentTime = 0;
